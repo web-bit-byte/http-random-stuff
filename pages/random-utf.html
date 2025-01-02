@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&#333</title>
+    </head>
+    <body style="background-color: black; color: white;" onload="randCharClockUTF();">
+
+        <h1 style="font-size: 256px;text-align: center;color: white;" id="randUTF" onmouseover="onMouseOverColor()" onmouseout="onMouseOutColor()"></h1>
+
+        <script>
+
+            function funcRandCharUTF()
+            {
+                let randNum = Math.floor(Math.random() * 11263);
+                randNum = Math.round(randNum)
+                let text = "&#";
+                let randNumText = randNum.toString();
+                let textCombined = text.concat(randNumText);
+                document.getElementById("randUTF").innerHTML = textCombined;
+            }
+
+
+            function randCharClockUTF()
+            {   
+                setInterval(funcRandCharUTF, 1000);
+            }
+
+            function onMouseOverColor()
+            {
+                document.getElementById("randUTF").style.color = "#00FF00";
+            }
+
+            function onMouseOutColor()
+            {
+                document.getElementById("randUTF").style.color = "#FFFFFF";
+            }
+        </script>
+    </body>
+</html>
